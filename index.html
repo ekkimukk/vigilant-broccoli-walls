@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wallpaper collection">
+  <title>Wallpapers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <span class="brand-mark">W</span>
+      <div>
+        <h1>Wallpapers</h1>
+        <p id="subtitle">Загрузка коллекции…</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <label class="search">
+        <span>⌕</span>
+        <input id="search" type="search" placeholder="Поиск по названию…" autocomplete="off">
+      </label>
+
+      <select id="sort" aria-label="Сортировка">
+        <option value="name">По имени</option>
+        <option value="newest">Сначала новые</option>
+        <option value="oldest">Сначала старые</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div id="folders" class="folders"></div>
+    <section id="gallery" class="gallery" aria-live="polite"></section>
+    <div id="empty" class="empty hidden">
+      <div class="empty-icon">∅</div>
+      <h2>Ничего не найдено</h2>
+      <p>Попробуйте изменить поисковый запрос.</p>
+    </div>
+    <div id="error" class="error hidden"></div>
+  </main>
+
+  <div id="lightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Просмотр обоев">
+    <button id="close" class="close" aria-label="Закрыть">×</button>
+    <button id="prev" class="nav prev" aria-label="Предыдущие">‹</button>
+    <figure>
+      <img id="lightbox-image" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button id="next" class="nav next" aria-label="Следующие">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
