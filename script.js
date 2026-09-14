@@ -40,7 +40,7 @@ async function loadRepository() {
   const { owner, repo } = repoInfo();
 
   if (owner === "YOUR_GITHUB_USERNAME") {
-    throw new Error("Не удалось определить GitHub-репозиторий. Откройте сайт через GitHub Pages или укажите owner/repo в script.js.");
+    throw new Error("не удалось определить GitHub-репозиторий. откройте сайт через GitHub Pages или укажите owner/repo в script.js.");
   }
 
   const response = await fetch(
@@ -49,7 +49,7 @@ async function loadRepository() {
   );
 
   if (!response.ok) {
-    throw new Error(`GitHub API вернул HTTP ${response.status}. Проверьте, что репозиторий публичный.`);
+    throw new Error(`GitHub API вернул HTTP ${response.status}. проверьте, что репозиторий публичный.`);
   }
 
   const data = await response.json();
@@ -82,7 +82,7 @@ async function loadRepository() {
 
   const folderSet = [...new Set(state.items.map(item => item.folder))];
   folders.innerHTML = [
-    `<button class="folder active" data-folder="">Все <span>${state.items.length}</span></button>`,
+    `<button class="folder active" data-folder="">все <span>${state.items.length}</span></button>`,
     ...folderSet.map(folder => {
       const count = state.items.filter(item => item.folder === folder).length;
       return `<button class="folder" data-folder="${escapeHtml(folder)}">${escapeHtml(folder)} <span>${count}</span></button>`;
@@ -98,7 +98,7 @@ async function loadRepository() {
     });
   });
 
-  $("subtitle").textContent = `${state.items.length} ${pluralize(state.items.length, "обои", "обоев", "обоя")}`;
+  $("subtitle").textContent = `${state.items.length} ${pluralize(state.items.length, "", "", "")}`;
   render();
 }
 
