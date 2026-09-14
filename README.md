@@ -1,10 +1,10 @@
 # Wallpaper Gallery
 
-Статическая галерея для GitHub Pages.
+Static wallpaper gallery for GitHub Pages.
 
-## Особенность
+## Features
 
-`index.html` вручную обновлять не нужно. `script.js` при каждом открытии сайта обращается к GitHub API, получает рекурсивное дерево репозитория и автоматически находит все файлы изображений:
+You do not need to update `index.html` manually. On every page load, `script.js` queries the GitHub API, reads the repository tree recursively, and automatically finds all image files:
 
 - JPG / JPEG
 - PNG
@@ -13,7 +13,7 @@
 - AVIF
 - BMP
 
-Поэтому достаточно добавить новую картинку в репозиторий и сделать `git push`.
+Simply add a new image to the repository and run `git push`.
 
 ## GitHub Pages
 
@@ -29,8 +29,8 @@
 
 `https://USERNAME.github.io/REPOSITORY/`
 
-### Важно
+### Important
 
-Репозиторий должен быть публичным: браузер пользователя обращается к GitHub API без токена.
+The repository must be public because the browser accesses the GitHub API without a token.
 
-GitHub API имеет ограничение на количество анонимных запросов, поэтому сайт не делает постоянных запросов — только один запрос при загрузке страницы.
+The GitHub API limits anonymous requests, so the site makes only one API request when the page loads.

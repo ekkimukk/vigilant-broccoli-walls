@@ -49,7 +49,7 @@ async function loadRepository() {
   );
 
   if (!response.ok) {
-    throw new Error(`GitHub API вернул HTTP ${response.status}. Проверьте, что репозиторий публичный.`);
+    throw new Error(`GitHub API returned HTTP ${response.status}. Make sure the repository is public.`);
   }
 
   const data = await response.json();

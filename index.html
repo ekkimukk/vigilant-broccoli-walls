@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Wallpaper collection">
-  <title>Wallpapers</title>
+  <title>walls</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,21 +12,21 @@
     <div class="brand">
       <span class="brand-mark">W</span>
       <div>
-        <h1>Wallpapers</h1>
-        <p id="subtitle">Загрузка коллекции…</p>
+        <h1>walls</h1>
+        <p id="subtitle">loading collection…</p>
       </div>
     </div>
 
     <div class="controls">
       <label class="search">
         <span>⌕</span>
-        <input id="search" type="search" placeholder="Поиск по названию…" autocomplete="off">
+        <input id="search" type="search" placeholder="…" autocomplete="off">
       </label>
 
       <select id="sort" aria-label="Сортировка">
-        <option value="name">По имени</option>
-        <option value="newest">Сначала новые</option>
-        <option value="oldest">Сначала старые</option>
+        <option value="name">by name</option>
+        <option value="newest">newest first</option>
+        <option value="oldest">oldest first</option>
       </select>
     </div>
   </header>
@@ -36,8 +36,7 @@
     <section id="gallery" class="gallery" aria-live="polite"></section>
     <div id="empty" class="empty hidden">
       <div class="empty-icon">∅</div>
-      <h2>Ничего не найдено</h2>
-      <p>Попробуйте изменить поисковый запрос.</p>
+      <h2>nothing found</h2>
     </div>
     <div id="error" class="error hidden"></div>
   </main>
