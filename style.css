@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap");
 
 :root {
   --bg: #0d0e0f;
@@ -22,7 +22,7 @@ body {
     radial-gradient(circle at 50% -20%, rgba(255,255,255,.055), transparent 35%),
     var(--bg);
   color: var(--text);
-  font-family: "Iosevka Charon Mono", monospace;
+  font-family: Inter, system-ui, sans-serif;
 }
 
 button, input, select { font: inherit; }
@@ -55,7 +55,7 @@ button, input, select { font: inherit; }
   border: 1px solid var(--border);
   border-radius: 11px;
   color: var(--accent);
-  font: 600 18px "Iosevka Charon Mono", monospace;
+  font: 600 18px "JetBrains Mono", monospace;
 }
 
 h1 {
@@ -197,7 +197,7 @@ main {
 .card-name {
   overflow: hidden;
   color: #f1eee7;
-  font: 12px "Iosevka Charon Mono", monospace;
+  font: 12px "JetBrains Mono", monospace;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -217,7 +217,7 @@ main {
 .empty-icon {
   margin-bottom: 12px;
   color: #4d4f51;
-  font: 40px "Iosevka Charon Mono", monospace;
+  font: 40px "JetBrains Mono", monospace;
 }
 
 .empty h2 {
@@ -271,7 +271,7 @@ main {
   max-width: 80vw;
   overflow: hidden;
   color: #aaa;
-  font: 11px "Iosevka Charon Mono", monospace;
+  font: 11px "JetBrains Mono", monospace;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

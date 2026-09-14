@@ -49,7 +49,7 @@ async function loadRepository() {
   );
 
   if (!response.ok) {
-    throw new Error(`GitHub API returned HTTP ${response.status}. Make sure the repository is public.`);
+    throw new Error(`GitHub API вернул HTTP ${response.status}. Проверьте, что репозиторий публичный.`);
   }
 
   const data = await response.json();
@@ -201,5 +201,5 @@ loadRepository().catch(err => {
   console.error(err);
   error.textContent = err.message;
   error.classList.remove("hidden");
-  $("subtitle").textContent = "Ошибка загрузки";
+  $("subtitle").textContent = "ошибка загрузки";
 });
